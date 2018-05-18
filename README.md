@@ -1,1 +1,1 @@
-# blog-api
+# NodeJS Blogging API
