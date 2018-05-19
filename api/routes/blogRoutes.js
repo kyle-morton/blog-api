@@ -2,7 +2,6 @@
 module.exports = function(app) {
   var blogEntry = require('../controllers/blogEntryController');
 
-  // todoList Routes
   app.route('/entries')
     .get(blogEntry.listAll)
     .post(blogEntry.create);

@@ -19,9 +19,11 @@ app.use(bodyParser.json());
 //   res.status(404).send({url: req.originalUrl + ' not found'})
 // });
 
-var routes = require('./api/routes/blogRoutes'); //importing route
-routes(app); //register the route
+var blogRoutes = require('./api/routes/blogRoutes'); //importing route
+blogRoutes(app); //register the route
 
+var homeRoutes = require('./api/routes/homeRoutes');
+homeRoutes(app);
 
 app.listen(port);
 
