@@ -7,3 +7,6 @@ https://www.codementor.io/olatundegaruba/nodejs-restful-apis-in-10-minutes-q0sgs
 
 //start node server
 npm run start
+
+//heroku url
+https://mkm-node-api.herokuapp.com/
