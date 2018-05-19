@@ -4,7 +4,7 @@
 var mongoose = require('mongoose'),
 Entry = mongoose.model('BlogEntries');
 
-exports.listEntries = function(req, res) {
+exports.listAll = function(req, res) {
     Entry.find({}, function(err, entry) {
     if (err)
       res.send(err);
