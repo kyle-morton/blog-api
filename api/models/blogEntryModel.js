@@ -12,6 +12,10 @@ var BlogEntrySchema = new Schema({
         type: String,
         required: 'please enter the post title'
     },
+    author: {
+        type: String,
+        required: 'author name required'
+    },
     Created_date: {
         type: Date,
         default: Date.now
