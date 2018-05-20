@@ -11,8 +11,6 @@ if (process.env.mongoConnString)
 else 
   connectionString = 'mongodb://localhost/Blogdb'; //local database
 
-console.log('connection string: ' + connectionString);
-
 // mongoose instance connection url connection
 mongoose.Promise = global.Promise;
 mongoose.connect(connectionString);
