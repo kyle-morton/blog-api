@@ -5,10 +5,17 @@ var express = require('express'),
   Entry = require('./api/models/blogEntryModel'), //created model loading here
   bodyParser = require('body-parser');
   
+var connectionString = "";
+if (process.env.mongoConnString)
+  connectionString = process.env.mongoConnString; //get CS from configuration vars
+else 
+  connectionString = 'mongodb://localhost/Blogdb'; //local database
+
+console.log('connection string: ' + connectionString);
+
 // mongoose instance connection url connection
 mongoose.Promise = global.Promise;
-// mongoose.connect('mongodb://localhost/Blogdb'); 
-mongoose.connect('mongodb+srv://blog_rw_user:password1234@kmnosql-ln6px.mongodb.net/BlogDb');
+mongoose.connect(connectionString);
 
 
 app.use(bodyParser.urlencoded({ extended: true }));
