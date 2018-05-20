@@ -1,5 +1,7 @@
 'use strict';
 
 exports.get = function(req, res) {
-    res.json('found route!');
+    var config = process;
+    res.json(config ? process.env.mongoPassword : 'config not found...');
+    // res.json('found route!');
 };
