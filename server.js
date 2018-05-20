@@ -1,5 +1,6 @@
 var express = require('express'),
   app = express(),
+  cors = require('cors'),
   port = process.env.PORT || 3000,
   mongoose = require('mongoose'),
   Entry = require('./api/models/blogEntryModel'), //created model loading here
@@ -15,7 +16,7 @@ else
 mongoose.Promise = global.Promise;
 mongoose.connect(connectionString);
 
-
+app.use(cors()); //enable cors on all requests
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
